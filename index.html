@@ -2,139 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!--=============== FAVICON ===============-->
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
-
-  <!--=============== REMIXICONS ===============-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin />
-
-  <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
 
   <title>Kiana Ghassabi | Portfolio</title>
 </head>
-
 <body>
-  <!--==================== HEADER ====================-->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">Kiana Ghassabi</a>
-      <div class="nav__menu">
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="#" class="nav__logo">Kiana</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li><a href="#home" class="nav__link">Home</a></li>
-          <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#services" class="nav__link">Research</a></li>
-          <li><a href="#projects" class="nav__link">Projects</a></li>
-          <li><a href="#contact" class="nav__link">Contact</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-menu"></i>
       </div>
     </nav>
   </header>
 
-  <!--==================== MAIN ====================-->
-  <main class="main">
+  <main class="l-main">
+    <!--===== HOME =====-->
+    <section class="home bd-grid" id="home">
+      <div class="home__data">
+        <h1 class="home__title">Hi, I'm <span class="home__title-color">Kiana</span><br>PhD Researcher</h1>
+        <p class="home__description">I specialize in secure cloud storage, data deduplication, and embedded IoT systems — combining research with real-world engineering.</p>
+        <a href="#contact" class="button">Contact</a>
+      </div>
 
-    <!--==================== HOME ====================-->
-    <section class="home section" id="home">
-      <div class="home__container container grid">
-        <div class="home__data">
-          <h1 class="home__title">Hi, I'm Kiana 👋</h1>
-          <h3 class="home__subtitle">PhD Student | Data Systems Engineer</h3>
-          <p class="home__description">
-            I specialize in secure cloud storage, data deduplication, and embedded IoT systems. I bridge deep research with real-world engineering.
-          </p>
-          <a href="#contact" class="button">Get in touch</a>
-        </div>
-        <img src="assets/kianapic.jpeg" alt="Kiana Ghassabi" class="home__img" />
+      <div class="home__social">
+        <a href="https://linkedin.com/in/kiana-ghassabi" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/kianaghassabi" class="home__social-icon"><i class="bx bxl-github"></i></a>
+        <a href="https://www.researchgate.net/profile/Kiana-Ghassabi" class="home__social-icon"><i class="bx bx-book"></i></a>
+      </div>
+
+      <div class="home__img">
+        <img src="assets/img/perfil.png" alt="Profile Image" class="home__blob-img"/>
       </div>
     </section>
 
-    <!--==================== ABOUT ====================-->
+    <!--===== ABOUT =====-->
     <section class="about section" id="about">
-      <div class="container">
-        <h2 class="section__title">About Me</h2>
-        <p>
-          I’m currently pursuing a PhD in Computer Science with a focus on secure data deduplication and large-scale storage optimization. I hold both BSc and MSc degrees in Computer Science from IASBS, graduating top of my class. My research blends data security, wireless communication, and NLP-driven deduplication systems.
-        </p>
-        <p>
-          I’ve published in top venues like IEEE Access, VTC, and IEEE Communications Letters. Outside of research, I enjoy building real-time IoT networks, visualizing data, and writing efficient code.
-        </p>
-        <a href="assets/my_Academic_CV.pdf" class="button" target="_blank">Download CV</a>
-      </div>
-    </section>
-
-    <!--==================== SERVICES ====================-->
-    <section class="services section" id="services">
-      <div class="container">
-        <h2 class="section__title">Research Interests</h2>
-        <div class="services__container grid">
-          <div class="services__content">
-            <i class="ri-cloud-line services__icon"></i>
-            <h3 class="services__title">Cloud Storage</h3>
-            <p>Designing secure, deduplicated, and scalable cloud infrastructure for sensitive data.</p>
-          </div>
-          <div class="services__content">
-            <i class="ri-wifi-line services__icon"></i>
-            <h3 class="services__title">IoT Systems</h3>
-            <p>Embedded programming, LPWAN, and real-time monitoring for smart environments.</p>
-          </div>
-          <div class="services__content">
-            <i class="ri-lock-line services__icon"></i>
-            <h3 class="services__title">Data Security</h3>
-            <p>End-to-end encryption, network coding, and NLP-based privacy mechanisms.</p>
-          </div>
+      <h2 class="section-title">About</h2>
+      <div class="about__container bd-grid">
+        <div class="about__img">
+          <img src="assets/img/about.jpg" alt="">
+        </div>
+        <div>
+          <h2 class="about__subtitle">I'm Kiana Ghassabi</h2>
+          <p class="about__text">
+            PhD student in Computer Science with a passion for designing secure, efficient data systems. My work focuses on secure cloud storage, NLP-powered deduplication, embedded IoT networks, and wireless communication protocols. I’ve published research in IEEE Access, IEEE Comm. Letters, and VTC.
+          </p>
         </div>
       </div>
     </section>
 
-    <!--==================== PROJECTS ====================-->
-    <section class="projects section" id="projects">
-      <div class="container">
-        <h2 class="section__title">Projects</h2>
-        <div class="projects__container grid">
-          <div class="projects__card">
-            <h3 class="projects__title">DEDUCT System</h3>
-            <p class="projects__description">An NLP-based cloud deduplication system published in IEEE Access.</p>
-            <a href="https://ieeexplore.ieee.org/document/10534035" class="projects__button">View</a>
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills__container bd-grid">
+        <div>
+          <h2 class="skills__subtitle">Technical Skills</h2>
+          <p class="skills__text">Cloud architecture, IoT development, and data security are my strengths.</p>
+
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-python skills__icon"></i>
+              <span class="skills__name">Python</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div><span class="skills__percentage">90%</span></div>
           </div>
-          <div class="projects__card">
-            <h3 class="projects__title">IoT HVAC Monitor</h3>
-            <p class="projects__description">Low-power LPWAN sensor network to reduce energy use in HVAC systems.</p>
+
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bx-code skills__icon"></i>
+              <span class="skills__name">C++ / Embedded C</span>
+            </div>
+            <div class="skills__bar skills__css"></div>
+            <div><span class="skills__percentage">85%</span></div>
           </div>
-          <div class="projects__card">
-            <h3 class="projects__title">Network Coding Optimizer</h3>
-            <p class="projects__description">Increased decoding efficiency of packet recovery algorithms in wireless networks.</p>
-            <a href="https://ieeexplore.ieee.org/document/9226485" class="projects__button">View</a>
+
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxs-data skills__icon"></i>
+              <span class="skills__name">Power BI / Data Viz</span>
+            </div>
+            <div class="skills__bar skills__js"></div>
+            <div><span class="skills__percentage">80%</span></div>
           </div>
+
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bx-lock-alt skills__icon"></i>
+              <span class="skills__name">Cloud Security</span>
+            </div>
+            <div class="skills__bar skills__ux"></div>
+            <div><span class="skills__percentage">88%</span></div>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/img/work3.jpg" alt="" class="skills__img" />
         </div>
       </div>
     </section>
 
-    <!--==================== CONTACT ====================-->
+    <!--===== PROJECTS =====-->
+    <section class="work section" id="work">
+      <h2 class="section-title">Projects</h2>
+      <div class="work__container bd-grid">
+        <a href="https://ieeexplore.ieee.org/document/10534035" class="work__img">
+          <img src="assets/img/work1.jpg" alt="" />
+          <p class="work__title">DEDUCT: Secure Cloud NLP Deduplication</p>
+        </a>
+        <a href="https://ieeexplore.ieee.org/document/9226485" class="work__img">
+          <img src="assets/img/work2.jpg" alt="" />
+          <p class="work__title">Network Coding Optimizer</p>
+        </a>
+        <a href="#" class="work__img">
+          <img src="assets/img/work3.jpg" alt="" />
+          <p class="work__title">IoT HVAC System with LPWAN</p>
+        </a>
+      </div>
+    </section>
+
+    <!--===== CONTACT =====-->
     <section class="contact section" id="contact">
-      <div class="container">
-        <h2 class="section__title">Contact</h2>
-        <p>Email: <a href="mailto:kianaghassabi@gmail.com">kianaghassabi@gmail.com</a></p>
-        <p>Academic Email: <a href="mailto:kianaghassabi@iasbs.ac.ir">kianaghassabi@iasbs.ac.ir</a></p>
-        <p>
-          <a href="https://linkedin.com/in/kiana-ghassabi" target="_blank">LinkedIn</a> · 
-          <a href="https://github.com/kianaghassabi" target="_blank">GitHub</a> · 
-          <a href="https://www.researchgate.net/profile/Kiana-Ghassabi" target="_blank">ResearchGate</a>
-        </p>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact__container bd-grid">
+        <form action="#" class="contact__form">
+          <input type="text" placeholder="Name" class="contact__input" />
+          <input type="mail" placeholder="Email" class="contact__input" />
+          <textarea cols="0" rows="10" class="contact__input" placeholder="Write your message..."></textarea>
+          <input type="submit" value="Send" class="contact__button button" />
+        </form>
       </div>
     </section>
   </main>
 
-  <!--==================== FOOTER ====================-->
+  <!--===== FOOTER =====-->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Kiana Ghassabi | Made with ❤️ & Remixicons</p>
+    <p class="footer__title">Kiana Ghassabi</p>
+    <div class="footer__social">
+      <a href="https://linkedin.com/in/kiana-ghassabi" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://github.com/kianaghassabi" class="footer__icon"><i class="bx bxl-github"></i></a>
     </div>
+    <p class="footer__copy">&#169; 2025 Kiana Ghassabi. All rights reserved.</p>
   </footer>
 
-  <!-- JS SCRIPTS -->
+  <!--===== SCROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
