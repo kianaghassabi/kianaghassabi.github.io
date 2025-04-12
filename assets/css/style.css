@@ -16,15 +16,16 @@ body{
     color: #fff;
 }
 .center-box {
-  width: 150px; /* or any fixed size you prefer */
-  margin: 100px auto 0 auto; /* centers it horizontally and pushes it down */
+  width: 1px; /* this value is too small — increase it */
+  margin: 100px auto 0 auto;
   padding: 30px;
   background-color: white;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */ /* ← remove or comment this */
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 
 .page-navbar .logo{
     font-size: 1.5rem;
