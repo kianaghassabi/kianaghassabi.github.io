@@ -45,10 +45,12 @@ body{
 }
 
 .blob-image-container {
-  width: 250px;              /* Adjust as needed */
-  height: 300px;             /* Adjust as needed */
-  object-fit: cover;         /* Ensures image fills the area */
-  border-radius: 10%;        /* Optional: circle crop */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px; /* Adjust as needed */
 }
 svg {
   display: block;
