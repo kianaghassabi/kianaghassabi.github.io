@@ -129,6 +129,26 @@ body{
   z-index: 3;
 }
 
+.hero-photo {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #000;
+  background: #eee;
+  box-shadow: 10px 10px 0px #000;
+}
+
+.photo-wrapper {
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: clean up buttons */
+.btn-outline-dark {
+  margin-right: 8px;
+  margin-top: 5px;
+}
 
 .cv-block.info{
     padding-top: 70px;
