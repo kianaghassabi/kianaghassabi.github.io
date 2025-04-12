@@ -16,7 +16,7 @@ body{
     color: #fff;
 }
 .center-box {
-  width: 350px; /* or any fixed size you prefer */
+  width: 150px; /* or any fixed size you prefer */
   margin: 100px auto 0 auto; /* centers it horizontally and pushes it down */
   padding: 30px;
   background-color: white;
