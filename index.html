@@ -1,172 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<html>
+	
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Kiana Ghassabi </title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	
 
-  <title>Kiana Ghassabi | Portfolio</title>
-</head>
-<body>
-  <!--===== HEADER =====-->
-  <header class="l-header">
-    <nav class="nav bd-grid">
-      <div>
-        <a href="#" class="nav__logo">Kiana</a>
-      </div>
+	<body>
+	    <nav class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+	        <div class="container">
+	            <a class="navbar-brand logo" href="#">Kiana Ghassabi</a>
+	            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	            <div class="collapse navbar-collapse" id="navbarNav">
+	                <ul class="navbar-nav mx-auto">
+	
 
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
-      </div>
+	                </ul>
+	            </div>
+	            <a href="./assets/my_Academic_CV.pdf" class="btn btn-danger download-template" role="button" aria-disabled="true">Download CV</a>
+	        </div>
+	    </nav>
+	    <main class="page cv-page">
+	        <section class="cv-block block-intro border-bottom">
+	            <div class="container">
+	                <div class="avatar">
+	                    <img class="img-fluid rounded-circle" src="./assets/kianapic.jpeg">
+	                </div>
+	                <p style="font-size: 15pt;">
+I'm a Computer Science master's graduate, proficient in research and programming. My academic journey has equipped me with the skills to delve into complex problems, conduct thorough research, and develop innovative solutions.
+	                </p>
+	                <div class="container">
+	                    <div class="social-icons">
+	                        <a href="https://www.linkedin.com/in/kiana-ghassabi-723b78164/" class="btn btn-outline-primary">Linked In</a> &nbsp;
+	                        <a href="https://github.com/kianaghassabi" class="btn btn-outline-dark">GitHub</a> &nbsp;
+	                        <a href="https://www.researchgate.net/profile/Kiana-Ghassabi" class="btn btn-outline-success">Researchgate</a>
+	                        </a>
+	                    </div>
+	
 
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="bx bx-menu"></i>
-      </div>
-    </nav>
-  </header>
+	                    <div style="margin-top: 10px;">
+	                        <span "> (<i class="ion-at icon " color:"gray "></i> Personal ) : kianaghassabi[at]gmail.com
+	                    <br> (
+	                    <i class="ion-at icon " color: "gray "></i> Academic ) : kianaghassabi[at]iasbs.ac.ir
+	                    </span>
+	            </div>
+	            </div>
+	
 
-  <main class="l-main">
-    <!--===== HOME =====-->
-    <section class="home bd-grid" id="home">
-      <div class="home__data">
-        <h1 class="home__title">Hi, I'm <span class="home__title-color">Kiana</span><br>PhD Researcher</h1>
-        <p class="home__description">I specialize in secure cloud storage, data deduplication, and embedded IoT systems — combining research with real-world engineering.</p>
-        <a href="#contact" class="button">Contact</a>
-      </div>
+	
 
-      <div class="home__social">
-        <a href="https://linkedin.com/in/kiana-ghassabi" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/kianaghassabi" class="home__social-icon"><i class="bx bxl-github"></i></a>
-        <a href="https://www.researchgate.net/profile/Kiana-Ghassabi" class="home__social-icon"><i class="bx bx-book"></i></a>
-      </div>
+	            </div>
+	        </section>
+	        <section class="cv-block info ">
+	            <div class="container ">
+	                <div class="work-experience group " id="work-experience ">
+	                    <h2 class="text-center ">Education 🎓</h2>
 
-      <div class="home__img">
-        <img src="assets/img/perfil.jpeg" alt="Profile Image" class="home__blob-img"/>
-      </div>
-    </section>
+	                    <div class="item ">
+	                        <div class="row ">
+	                            <div class="col-md-6 ">
+	                                <h3>M.Sc. in Computer Science</h3>
+	                                <h4 class="organization ">The Institute for Advanced Studies in Basic Sciences</h4>
+	                            </div>
+	                            <div class="col-md-6 ">
+	                                <time class="period ">2020 - 2023</time>
+	                            </div>
+	                        </div>
+	                        <p class="text-muted "><b>Thesis title:</b> Improving the efficiency of secure data deduplication methods in cloud storage services </a></p>
+	                        <p class="text-muted "><b>Supervisor:</b> <a href="https://iasbs.ac.ir/~pahlevani/ " style="all: none; ">Dr. Peyman Pahlevani</a></p>
+	                        <p class="text-muted "><b>GPA:</b> 19.29/20, total 34 credits completed, Rank (1/16)</p>
+	                        <p class="text-muted "> <b>Selected Graduate Courses:</b> Coding Theory, Advanced Computer Network,
+	                          Computational Data Mining, Parallel Algorithms, Advanced Algorithm Design, Advanced Database </p>
+	                    </div>
+	                    <div class="item ">
+	                        <div class="row ">
+	                            <div class="col-md-6 ">
+	                                <h3>B.Sc. in Information Technology Engineering</h3>
+	                                <h4 class="organization ">The Institute for Advanced Studies in Basic Sciences</h4>
+	
 
-    <!--===== ABOUT =====-->
-    <section class="about section" id="about">
-      <h2 class="section-title">About</h2>
-      <div class="about__container bd-grid">
-        <div class="about__img">
-          <img src="assets/img/about.jpg" alt="">
-        </div>
-        <div>
-          <h2 class="about__subtitle">I'm Kiana Ghassabi</h2>
-          <p class="about__text">
-            PhD student in Computer Science with a passion for designing secure, efficient data systems. My work focuses on secure cloud storage, NLP-powered deduplication, embedded IoT networks, and wireless communication protocols. I’ve published research in IEEE Access, IEEE Comm. Letters, and VTC.
-          </p>
-        </div>
-      </div>
-    </section>
+	                            </div>
+	                            <div class="col-md-6 ">
+	                                <time class="period ">2016 - 2020</time>
+	                            </div>
+	                        </div>
+	                        <p class="text-muted "><b>Thesis title:</b> Improving the Decoding Speed of Packet Recovery in Network Coding </p>
+	                        <p class="text-muted "><b>Supervisor:</b> <a href="https://iasbs.ac.ir/~pahlevani/ ">Dr. Peyman Pahlevani</a></p>
+	                        <p class="text-muted "><b>GPA:</b> 18.39/20, total 210 credits completed, Rank (1/26)</p>
+	                    </div>
+	
 
-    <!--===== SKILLS =====-->
-    <section class="skills section" id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills__container bd-grid">
-        <div>
-          <h2 class="skills__subtitle">Technical Skills</h2>
-          <p class="skills__text">Cloud architecture, IoT development, and data security are my strengths.</p>
+	                    <div class="education group " id="education ">
+	                        <h2 class="text-center "> Experience 🗃</h2>
 
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bxl-python skills__icon"></i>
-              <span class="skills__name">Python</span>
-            </div>
-            <div class="skills__bar skills__html"></div>
-            <div><span class="skills__percentage">90%</span></div>
-          </div>
+	                        <div class="item ">
+	                          <div class="row ">
+	                              <div class="col-md-6 ">
+	                                  <h4>Publications 📚</h4>
+	                         
+	                              </div>
+	                              <div class="col-md-6 ">
+	                               
+	                              </div>
+	                          </div>
 
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bx-code skills__icon"></i>
-              <span class="skills__name">C++ / Embedded C</span>
-            </div>
-            <div class="skills__bar skills__css"></div>
-            <div><span class="skills__percentage">85%</span></div>
-          </div>
+				  <h5>Deduplication of Textual Data by NLP Approaches</h5>
+	                          <p class="text-muted "><b>Conference Proeedings:</b> 2023 IEEE 97th Vehicular Technology Conference (VTC2023-Spring) </p>
+	                          <p class="text-muted "><b>Authors:</b> K Ghassabi, P Pahlevani, DE Lucani </p>
+	                          <p class="text-muted "><a href="https://ieeexplore.ieee.org/document/10199538 " class="btn btn-outline-dark ">Link</a> </p>
 
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bxs-data skills__icon"></i>
-              <span class="skills__name">Power BI / Data Viz</span>
-            </div>
-            <div class="skills__bar skills__js"></div>
-            <div><span class="skills__percentage">80%</span></div>
-          </div>
+				 <h5>Improving the Decoding Speed of Packet Recovery in Network Coding</h5>
+	                          <p class="text-muted "><b>Journal:</b> IEEE Communications Letters </p>
+	                          <p class="text-muted "><b>Authors:</b> Hosein K. Nazari, K Ghassabi, P Pahlevani, DE Lucani </p>
+	                          <p class="text-muted "><a href="https://ieeexplore.ieee.org/document/9226485 " class="btn btn-outline-dark ">Link</a> </p>
 
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class="bx bx-lock-alt skills__icon"></i>
-              <span class="skills__name">Cloud Security</span>
-            </div>
-            <div class="skills__bar skills__ux"></div>
-            <div><span class="skills__percentage">88%</span></div>
-          </div>
-        </div>
+	                         
+	                      </div>
+	
+	                        <div class="item ">
 
-        <div>
-          <img src="assets/img/work3.jpg" alt="" class="skills__img" />
-        </div>
-      </div>
-    </section>
+	                               <div class="row ">
+	                                <div class="col-md-6 ">
+	                                    <h4>Teaching Assistant 🏫</h4>
 
-    <!--===== PROJECTS =====-->
-    <section class="work section" id="work">
-      <h2 class="section-title">Projects</h2>
-      <div class="work__container bd-grid">
-        <a href="https://ieeexplore.ieee.org/document/10534035" class="work__img">
-          <img src="assets/img/work1.jpg" alt="" />
-          <p class="work__title">DEDUCT: Secure Cloud NLP Deduplication</p>
-        </a>
-        <a href="https://ieeexplore.ieee.org/document/9226485" class="work__img">
-          <img src="assets/img/work2.jpg" alt="" />
-          <p class="work__title">Network Coding Optimizer</p>
-        </a>
-        <a href="#" class="work__img">
-          <img src="assets/img/work3.jpg" alt="" />
-          <p class="work__title">IoT HVAC System with LPWAN</p>
-        </a>
-      </div>
-    </section>
+	                                    <h4 class="organization ">The Institute for Advanced Studies in Basic Sciences</h4>
+	                                </div>
+	                                <div class="col-md-6 ">
+	                                    <time class="period ">2019-2023</time>
+	                                </div>
+	                            </div>
+	                            <p class="text-muted "> <b> Information Theory and Network Coding (Graduate Course)</b>,  Instructed by Dr. Peyman Pahlevani, 2020, 2021</p>
+	                            <p class="text-muted "> <b> Advanced Computer Networks (Undergraduate Course)</b>,  Instructed by Dr. Peyman Pahlevani, 2022, 2023</p>
+	                            <p class="text-muted "> <b> Computer Networks (Undergraduate Course)</b>,  Instructed by Dr. Peyman Pahlevani, 2019, 2021</p>
+				    <p class="text-muted "> <b> Network Security (Undergraduate Course)</b>,  Instructed by Dr. Mohsen Hooshmand, 2022</p>
+	
+	                        </div>
 
-    <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact__container bd-grid">
-        <form action="#" class="contact__form">
-          <input type="text" placeholder="Name" class="contact__input" />
-          <input type="mail" placeholder="Email" class="contact__input" />
-          <textarea cols="0" rows="10" class="contact__input" placeholder="Write your message..."></textarea>
-          <input type="submit" value="Send" class="contact__button button" />
-        </form>
-      </div>
-    </section>
-  </main>
+	                        <div class="item ">
+	                            <div class="row ">
+	                                <div class="col-md-6 ">
+	                                    <h4>Research Experience 💻</h4>
+	                                </div>
+	                                <div class="col-md-6 ">
+	                                    <time class="period ">2017-2023</time>
+	                                </div>
+	                            </div>
 
-  <!--===== FOOTER =====-->
-  <footer class="footer">
-    <p class="footer__title">Kiana Ghassabi</p>
-    <div class="footer__social">
-      <a href="https://linkedin.com/in/kiana-ghassabi" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
-      <a href="https://github.com/kianaghassabi" class="footer__icon"><i class="bx bxl-github"></i></a>
-    </div>
-    <p class="footer__copy">&#169; 2025 Kiana Ghassabi. All rights reserved.</p>
-  </footer>
+				    <h5> Research Assistant at Wireless Communication Lab. (2019-2023)</h5><p class="text-muted "><b>Field:</b> Embedded Systems, Wireless Sensors, Cloud Computing, IoT.</p>													     
+	                            <p class="text-muted "><b>Supervisor:</b> Dr. Peyman Pahlevani</p>
+	                            <br>
 
-  <!--===== SCROLL REVEAL =====-->
-  <script src="https://unpkg.com/scrollreveal"></script>
+							  
+									  
+	                            <h5> Research Assistant at IoT Lab. (2018-2019)</h5><p class="text-muted "><b>Field:</b> IoT programming and Wireless sensor netwroks.</p>													     
+	                            <p class="text-muted "><b>Supervisor:</b> Dr. Peyman Pahlevani and Dr. Reza Parsameh</p>
+	                            <br>
+							 
+				    <h5>Research Associate at MetaverseAlliances (2021 - 2022)</h5><p class="text-muted ">
+				    <b>Field:</b> Blockchain Subdao.</p>
+			    
+	                            <p class="text-muted "><b>Supervisor:</b> Mr Amir Mohtshami</p>
+	                            <br>
+					
 
-  <!--===== MAIN JS =====-->
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+			            <h5>Researcher at Beyondmegasoft (2020 -2021)</h5><p class="text-muted "> 
+				    <b>Field:</b> Metaverse Game</p>
+	                            <p class="text-muted "><b>Supervisor:</b> Dr Sajjad Maleki</p>
+	                            <br>
+	
+
+	                            
+	
+
+	                        </div>
+	
+
+	
+
+	                        <div class="item ">
+	                            <div class="row ">
+	                                <div class="col-md-6 ">
+	                                    <h4>What's more</h4>
+	
+
+	                                </div>
+	                                <div class="col-md-6 ">
+	                                    <time class="period ">2017</time>
+	                                </div>
+	                            </div>
+	                            <p class="text-muted ">University presenter at 5th exhibition of ELECOMP fair, Fall 2017</p>
+	                          </p>
+	
+
+	                        </div>
+	
+
+	
+
+	
+
+	
+
+	                    </div>
+	                    <div class="group " id="skills ">
+	                        <div class="row ">
+	                            <div class="col-md-6 ">
+	                                <div class="skills info-card ">
+	                                    <h2>Technical Skills</h2>
+	                                    <h3>Programming Language</h3>
+	                                    <li>Python</li>
+	                                    <li>C++</li>
+	                                    <li>Embedded C++</li>
+	                                    <li>VBScript</li>
+	
+
+	                                    <h3>Other skills</h3>
+	                                    <li>Project management (Scrum, Agile)</li>
+	                                    <li>Graphic Design <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Photoshop & Illustrator)</li>
+	                                    <li>Fimilar with: <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                                        Database design ,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                                        Wireshark,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                                        source code management (Git),<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                                        Microcontrollers,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                                        Linux </li>
+	
+
+	                                </div>
+	                            </div>
+	
+
+	                            <div class="col-md-6 ">
+	                                <div class="contact-info info-card ">
+	                                    <h2>Research Interests</h2>
+	
+
+	                                    <li> Cloud Services</li>
+	                                    <li> Internet of Things</li>
+	                                    <li> Wireless Communication</li>
+	                                    <li> Data Security</li>
+									    
+	                              
+	                                    <br>
+	                                    <h2>Language Skills</h2>
+	                                    <li>Persian: &nbsp;<span class="badge badge-success "> Native</span></li>
+	                                    <li>Azari:&nbsp;<span class="badge badge-success "> Native</span></li>
+	                                    <li>English: &nbsp;<span class="badge badge-primary "> Proficient</span></li>
+	                                    <br>
+	                                    <h2>Soft skills</h2>
+	                                    <li> Effective time management</li>
+	                                    <li> Hard working</li>
+	                                    <li> Teamwork</li>
+	                                    <li> Leadership</li>
+	                                    <li> Adaptability and flexibility</li>
+	                                </div>
+	
+
+	                            </div>
+	                        </div>
+	
+
+	                        <br> <br>
+	                        <div class="row ">
+	
+
+	                            <div class="col-md-12 ">
+	                                <br>
+	                                <center>
+	                                    <h4>Further Skills</h4>
+	                                </center>
+	                                <center>
+	                                    <p>I enjoy working as part of a team and have the ability to build productive relationships with colleagues. I can efficiently manage my time to fulfill deadlines and prioritize my tasks to maintain a decent study-life balance.</p>
+	                                </center>
+	                                <br>
+	                            </div>
+	
+
+	                            <div class="col-md-12 ">
+	                                <br>
+	                            <center>
+	                             
+	
+
+	
+
+	
+
+	                </div>
+	        </section>
+	        <footer class="page-footer ">
+	            <div class="container ">
+	                <div class="social-icons ">
+	                    :)
+	                </div>
+	            </div>
+	        </footer>
+	    </main>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+	<script src="assets/js/script.js "></script>
+	
+
+	</html>
+
