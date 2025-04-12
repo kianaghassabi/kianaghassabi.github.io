@@ -80,6 +80,15 @@ body{
     border-radius: 100px;
     margin-bottom: 30px;
 }
+.profile-pic {
+  width: 180px;          /* or whatever size you want */
+  height: 180px;         /* must match width for circle */
+  object-fit: cover;     /* keeps the face centered */
+  border-radius: 50%;    /* makes it round */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
+}
 
 .cv-block.info{
     padding-top: 70px;
