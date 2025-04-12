@@ -80,6 +80,22 @@ body{
     border-radius: 100px;
     margin-bottom: 30px;
 }
+.image-frame {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  background-color: #fff;
+}
+
+.image-main {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  box-shadow: 12px 12px 0 #000;
+  border: none;
+  background-color: #fff;
+}
 
 .image-container {
   position: relative;
