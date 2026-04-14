@@ -1,66 +1,583 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kiana Ghassabi</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiana Ghassabi</title>
+  <meta
+    name="description"
+    content="Personal website of Kiana Ghassabi - PhD researcher in machine learning and time series."
+  />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+      --radius: 18px;
+      --maxw: 1050px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--maxw));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 248, 251, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 34px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      padding: 6px 12px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 24px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: #f9fafb;
+      text-decoration: none;
+    }
+
+    .side-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #1d4ed8, #0f766e);
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 18px 0 10px;
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      margin: 0 0 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .about-card,
+    .list-card,
+    .contact-card {
+      padding: 28px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .item {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .item:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .item h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+
+    .item .sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 0.9rem;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      padding: 22px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .project-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .footer {
+      padding: 34px 0 50px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-2,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      .hero-card,
+      .side-card,
+      .about-card,
+      .list-card,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .nav-inner {
+        gap: 12px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
-        <div class="container">
-            <a class="navbar-brand logo" href="#">Kiana Ghassabi</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto"></ul>
-            </div>
-            <a href="./assets/Kiana Ghassabi_CV_2025.pdf" class="btn btn-danger download-template" role="button">Download CV</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Kiana Ghassabi</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-card">
+          <div class="eyebrow">PhD Researcher • Machine Learning • Time Series</div>
+          <h1>Building models for complex time-dependent systems.</h1>
+          <p class="lead">
+            I am a PhD researcher at Aarhus University working on machine learning,
+            multivariate time series, forecasting, synthetic generation, and anomaly detection.
+            My work focuses on how models behave in dynamic and uncertain settings.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-secondary" href="cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+          </div>
         </div>
-    </nav>
 
-    <main class="page cv-page">
-        <section class="cv-block block-intro border-bottom">
-            <div class="center-box text-center mt-5">
-                <img src="./assets/img/perfil.jpeg" alt="Profile photo" style="width: 120px;  border-radius: 5%;">
+        <aside class="card side-card">
+          <div class="profile">
+            <div class="avatar">KG</div>
+            <div>
+              <h2 style="margin: 0 0 6px; font-size: 1.2rem;">Kiana Ghassabi</h2>
+              <div style="color: var(--muted);">Aarhus, Denmark</div>
             </div>
-            <p class="text-center mt-3" style="font-size: 15pt;">
-                I'm a Computer Science master's graduate, proficient in research and programming. My academic journey has equipped me with the skills to delve into complex problems, conduct thorough research, and develop innovative solutions.
-            </p>
-            <div class="container text-center">
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/kiana-ghassabi-723b78164/" class="btn btn-outline-primary">LinkedIn</a>
-                    <a href="https://github.com/kianaghassabi" class="btn btn-outline-dark ml-2">GitHub</a>
-                    <a href="https://www.researchgate.net/profile/Kiana-Ghassabi" class="btn btn-outline-success ml-2">ResearchGate</a>
-                </div>
-                <div class="mt-3">
-                    <span>
-                        (<i class="ion-at icon"></i> Personal): kianaghassabi[at]gmail.com<br>
-                        (<i class="ion-at icon"></i> Academic): kg[at]ece.au.dk
-                    </span>
-                </div>
+            <div class="meta">
+              <div>PhD in Computer Engineering</div>
+              <div>Aarhus University</div>
+              <div>Machine Learning • Time Series • Signal Processing</div>
             </div>
-        </section>
+          </div>
+          <div class="cta" style="margin-top: 24px;">
+            <a class="btn btn-secondary" href="https://github.com/kianaghassabi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/kiana-ghassabi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-        <!-- Continue with the rest of your content: Education, Experience, Publications, etc. -->
+    <section id="about">
+      <div class="card about-card">
+        <h2 class="section-title">About</h2>
+        <p>
+          My research focuses on designing and evaluating machine learning methods for
+          complex sequential data. I am particularly interested in multivariate time series,
+          long-horizon forecasting, generative modeling, and practical methods for working
+          with non-stationary systems.
+        </p>
+        <p>
+          I enjoy combining modeling, implementation, and interpretation—especially when a
+          system is challenging to understand from the outside and needs careful analysis to
+          make it work reliably in practice.
+        </p>
+        <div class="tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">Forecasting</span>
+          <span class="tag">Generative Modeling</span>
+          <span class="tag">Anomaly Detection</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+    </section>
 
-        <footer class="page-footer mt-5">
-            <div class="container text-center">
-                <div class="social-icons">
-                    :)
-                </div>
+    <section id="research">
+      <div class="grid-2">
+        <div class="card list-card">
+          <h2 class="section-title">Research Interests</h2>
+          <div class="list">
+            <div class="item">
+              <h3>Multivariate Time Series Modeling</h3>
+              <div class="sub">Forecasting, representation learning, long-range dependencies</div>
             </div>
-        </footer>
-    </main>
+            <div class="item">
+              <h3>Generative Modeling</h3>
+              <div class="sub">Synthetic data generation using forecasting backbones</div>
+            </div>
+            <div class="item">
+              <h3>Anomaly Detection</h3>
+              <div class="sub">Forecasting-driven detection in complex operational systems</div>
+            </div>
+            <div class="item">
+              <h3>Reliable Evaluation</h3>
+              <div class="sub">Structural, statistical, and spectral analysis of generated and real data</div>
+            </div>
+          </div>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+        <div class="card list-card">
+          <h2 class="section-title">Selected Publications</h2>
+          <div class="list">
+            <div class="item">
+              <h3>DEDUCT: A Secure Deduplication of Textual Data in Cloud Environments</h3>
+              <div class="sub">IEEE Access, 2024</div>
+            </div>
+            <div class="item">
+              <h3>Deduplication of Textual Data by NLP Approaches</h3>
+              <div class="sub">IEEE VTC 2023-Spring</div>
+            </div>
+            <div class="item">
+              <h3>Improving the Decoding Speed of Packet Recovery in Network Coding</h3>
+              <div class="sub">IEEE Communications Letters, 2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="card project-card">
+          <h3>Forecast-Guided Generative Modeling</h3>
+          <p>
+            Research on using forecasting models as generative backbones for multivariate
+            sequential data with a focus on stability and long-horizon behavior.
+          </p>
+          <a href="#">Project details</a>
+        </div>
+
+        <div class="card project-card">
+          <h3>Time Series Evaluation Pipeline</h3>
+          <p>
+            A framework for comparing real and synthetic data using distributional, structural,
+            autocorrelation, and spectral analyses.
+          </p>
+          <a href="#">Project details</a>
+        </div>
+
+        <div class="card project-card">
+          <h3>Data-Driven Monitoring</h3>
+          <p>
+            Work on practical monitoring and predictive systems involving structured data,
+            system behavior, and robust analysis pipelines.
+          </p>
+          <a href="#">Project details</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="grid-2">
+        <div class="card list-card">
+          <h2 class="section-title">Experience</h2>
+          <div class="list">
+            <div class="item">
+              <h3>PhD Researcher</h3>
+              <div class="sub">Aarhus University • 2024–Present</div>
+              <div>
+                Research in machine learning, multivariate time series, forecasting,
+                generation, and anomaly detection.
+              </div>
+            </div>
+            <div class="item">
+              <h3>Researcher</h3>
+              <div class="sub">Wireless Communication Lab, IASBS • 2020–2023</div>
+              <div>
+                Worked on structured datasets, system analysis, and data-driven methods.
+              </div>
+            </div>
+            <div class="item">
+              <h3>Embedded Systems Engineer</h3>
+              <div class="sub">IoT Lab, IASBS • 2017–2019</div>
+              <div>
+                Developed monitoring systems using Raspberry Pi and Arduino.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card list-card">
+          <h2 class="section-title">Teaching</h2>
+          <div class="list">
+            <div class="item">
+              <h3>Teaching Assistant</h3>
+              <div class="sub">Aarhus University & IASBS</div>
+              <div>
+                Supported teaching in communication systems, distributed systems,
+                network-related subjects, and student problem-solving.
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-top: 26px;">Education</h2>
+          <div class="list">
+            <div class="item">
+              <h3>PhD in Computer Engineering</h3>
+              <div class="sub">Aarhus University</div>
+            </div>
+            <div class="item">
+              <h3>M.Sc. in Computer Science</h3>
+              <div class="sub">IASBS</div>
+            </div>
+            <div class="item">
+              <h3>B.Sc. in Information Technology Engineering</h3>
+              <div class="sub">IASBS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card contact-card">
+        <h2 class="section-title">Contact</h2>
+        <p>
+          You can reach me for research collaboration, academic discussions, or relevant technical opportunities.
+        </p>
+        <div class="list">
+          <div class="item">
+            <strong>Email:</strong>
+            <a href="mailto:kianaghassabi@gmail.com">kianaghassabi@gmail.com</a>
+          </div>
+          <div class="item">
+            <strong>GitHub:</strong>
+            <a href="https://github.com/kianaghassabi" target="_blank" rel="noopener noreferrer">
+              github.com/kianaghassabi
+            </a>
+          </div>
+          <div class="item">
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/kiana-ghassabi" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/kiana-ghassabi
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container" style="padding: 0;">
+        © <span id="year"></span> Kiana Ghassabi
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
